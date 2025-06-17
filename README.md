@@ -12,9 +12,9 @@ Criar uma solução intuitiva e responsiva para gestão financeira pessoal, foca
 
 ## 🚀 Status do Projeto
 
-🟢 **Frontend Finalizado** - Todas as telas principais foram desenvolvidas e estão funcionais.
+🟢 **Frontend em Andamento** - Tela principal (dashboard) funcionando.
 
-🟡 **Backend em Desenvolvimento** - Próxima etapa: construção do backend e integração com banco de dados.
+🟡 **Backend em Desenvolvimento** - Futura etapa: construção do backend e integração com banco de dados.
 
 ## 🛠️ Tecnologias Utilizadas
 
