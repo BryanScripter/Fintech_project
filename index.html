@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Gerenciamento Financeiro</title>
+
+    <!-- Bootstrap CSS (Usei apenas para grid e utilitários) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meu CSS customizado -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Checkbox para controlar menu mobile -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <!-- Navegação Lateral -->
+    <nav class="side-nav">
+        <div class="nav-header">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line nav-logo"></i>
+                <span class="nav-title">FinTrack</span>
+            </div>
+            <!-- Botão para fechar menu -->
+            <label for="menu-toggle" class="close-menu d-lg-none">
+                <i class="fas fa-times"></i>
+            </label>
+        </div>
+        <div class="nav-items">
+            <!-- Links com labels para fechar menu automaticamente -->
+            <input type="radio" name="nav" id="nav-dashboard" class="nav-radio" checked>
+            <label for="nav-dashboard" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-label">Início</span>
+            </label>
+
+            <input type="radio" name="nav" id="nav-reports" class="nav-radio">
+            <label for="nav-reports" class="nav-item">
+                <i class="fas fa-file-alt nav-icon"></i>
+                <span class="nav-label">Relatórios</span>
+            </label>
+
+            <input type="radio" name="nav" id="nav-analytics" class="nav-radio">
+            <label for="nav-analytics" class="nav-item">
+                <i class="fas fa-chart-bar nav-icon"></i>
+                <span class="nav-label">Gráficos</span>
+            </label>
+
+            <input type="radio" name="nav" id="nav-profile" class="nav-radio">
+            <label for="nav-profile" class="nav-item">
+                <i class="fas fa-user-circle nav-icon"></i>
+                <span class="nav-label">Perfil</span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="main-wrapper">
+        <!-- Header Principal -->
+        <header class="main-header">
+            <div class="container-fluid">
+                <div class="header-content">
+                    <!-- Botão do menu mobile -->
+                    <label for="menu-toggle" class="menu-toggle d-lg-none">
+                        <i class="fas fa-bars"></i>
+                    </label>
+
+                    <div class="logo-section">
+                        <i class="fas fa-chart-line logo-icon"></i>
+                        <h1 class="logo-text">FinTrack</h1>
+                    </div>
+
+                    <div class="user-section">
+                        <div class="notifications">
+                            <i class="fas fa-bell notification-icon"></i>
+                            <span class="notification-badge">3</span>
+                        </div>
+                        <div class="user-profile">
+                            <img src="./assets/img/219983.png" alt="Perfil" class="user-avatar">
+                            <span class="user-name">User</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="container-fluid">
+                <!-- Seção de Boas-vindas -->
+                <section class="welcome-section">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="welcome-title">Dashboard Financeiro</h2>
+                            <p class="welcome-subtitle">Gerencie suas finanças de forma inteligente</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cards de Saldo -->
+                <section class="balance-section">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="balance-card primary-card">
+                                <div class="card-header">
+                                    <h3>Saldo Total</h3>
+                                    <i class="fas fa-wallet card-icon"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="balance-amount">R$ 510.797,90</h2>
+                                    <span class="balance-change positive">+2.5% este mês</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="balance-card income-card">
+                                <div class="card-header">
+                                    <h3>Receitas</h3>
+                                    <i class="fas fa-arrow-trend-up card-icon"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="balance-amount">R$ 45.280,00</h2>
+                                    <span class="balance-change positive">+12.3%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="balance-card expense-card">
+                                <div class="card-header">
+                                    <h3>Despesas</h3>
+                                    <i class="fas fa-arrow-trend-down card-icon"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="balance-amount">R$ 18.420,50</h2>
+                                    <span class="balance-change negative">-5.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="balance-card investment-card">
+                                <div class="card-header">
+                                    <h3>Investimentos</h3>
+                                    <i class="fas fa-chart-pie card-icon"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="balance-amount">R$ 89.680,90</h2>
+                                    <span class="balance-change positive">+8.7%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Principal com Gráfico e Dados -->
+                <section class="dashboard-section">
+                    <div class="row g-4">
+                        <!-- Gráfico de Despesas -->
+                        <div class="col-lg-8">
+                            <div class="chart-container">
+                                <div class="section-header">
+                                    <h3>Despesas por Categoria</h3>
+                                    <select class="form-select period-select">
+                                        <option value="week">Esta Semana</option>
+                                        <option value="month" selected>Este Mês</option>
+                                        <option value="year">Este Ano</option>
+                                    </select>
+                                </div>
+
+                                <!-- Gráfico de Pizza CSS -->
+                                <div class="chart-wrapper">
+                                    <div class="pie-chart">
+                                        <div class="chart-center">
+                                            <span class="chart-title">Despesas</span>
+                                            <span class="chart-subtitle">Este Mês</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #FF6B6B;"></div>
+                                        <span>Alimentação (30%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #4ECDC4;"></div>
+                                        <span>Transporte (25%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #45B7D1;"></div>
+                                        <span>Lazer (20%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #96CEB4;"></div>
+                                        <span>Saúde (15%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #FFEAA7;"></div>
+                                        <span>Outros (10%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campos de Filtro e Transações -->
+                        <div class="col-lg-4">
+                            <div class="filter-container">
+                                <h3>Filtros de Dados</h3>
+                                <div class="filter-fields">
+                                    <input type="radio" id="filter-valor" name="filter" class="filter-radio">
+                                    <label for="filter-valor" class="field-item">
+                                        <div class="field-content">
+                                            <i class="fas fa-dollar-sign field-icon"></i>
+                                            <span class="field-label">Valor</span>
+                                        </div>
+                                        <i class="fas fa-chevron-right field-arrow"></i>
+                                    </label>
+
+                                    <input type="radio" id="filter-categoria" name="filter" class="filter-radio"
+                                        checked>
+                                    <label for="filter-categoria" class="field-item">
+                                        <div class="field-content">
+                                            <i class="fas fa-tags field-icon"></i>
+                                            <span class="field-label">Categoria</span>
+                                        </div>
+                                        <i class="fas fa-chevron-right field-arrow"></i>
+                                    </label>
+
+                                    <input type="radio" id="filter-data" name="filter" class="filter-radio">
+                                    <label for="filter-data" class="field-item">
+                                        <div class="field-content">
+                                            <i class="fas fa-calendar field-icon"></i>
+                                            <span class="field-label">Data</span>
+                                        </div>
+                                        <i class="fas fa-chevron-right field-arrow"></i>
+                                    </label>
+
+                                    <input type="radio" id="filter-descricao" name="filter" class="filter-radio">
+                                    <label for="filter-descricao" class="field-item">
+                                        <div class="field-content">
+                                            <i class="fas fa-file-text field-icon"></i>
+                                            <span class="field-label">Descrição</span>
+                                        </div>
+                                        <i class="fas fa-chevron-right field-arrow"></i>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Transações Recentes -->
+                            <div class="transactions-container">
+                                <h3>Transações Recentes</h3>
+                                <div class="transactions-list">
+                                    <div class="transaction-item">
+                                        <div class="transaction-info">
+                                            <div class="transaction-icon income">
+                                                <i class="fas fa-briefcase"></i>
+                                            </div>
+                                            <div class="transaction-details">
+                                                <h4>Salário</h4>
+                                                <p>15/01/2024 • Trabalho</p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-amount positive">
+                                            +R$ 8.500,00
+                                        </div>
+                                    </div>
+
+                                    <div class="transaction-item">
+                                        <div class="transaction-info">
+                                            <div class="transaction-icon expense">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <div class="transaction-details">
+                                                <h4>Supermercado</h4>
+                                                <p>14/01/2024 • Alimentação</p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-amount negative">
+                                            -R$ 450,80
+                                        </div>
+                                    </div>
+
+                                    <div class="transaction-item">
+                                        <div class="transaction-info">
+                                            <div class="transaction-icon expense">
+                                                <i class="fas fa-gas-pump"></i>
+                                            </div>
+                                            <div class="transaction-details">
+                                                <h4>Combustível</h4>
+                                                <p>13/01/2024 • Transporte</p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-amount negative">
+                                            -R$ 180,00
+                                        </div>
+                                    </div>
+
+                                    <div class="transaction-item">
+                                        <div class="transaction-info">
+                                            <div class="transaction-icon income">
+                                                <i class="fas fa-laptop"></i>
+                                            </div>
+                                            <div class="transaction-details">
+                                                <h4>Freelance</h4>
+                                                <p>12/01/2024 • Trabalho</p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-amount positive">
+                                            +R$ 1.200,00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ações Rápidas -->
+                <section class="quick-actions-section">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Ações Rápidas</h3>
+                            <div class="actions-grid">
+                                <a href="#transfer" class="action-btn">
+                                    <i class="fas fa-exchange-alt action-icon"></i>
+                                    <span>Transferir</span>
+                                </a>
+                                <a href="#bills" class="action-btn">
+                                    <i class="fas fa-receipt action-icon"></i>
+                                    <span>Pagar Conta</span>
+                                </a>
+                                <a href="#invest" class="action-btn">
+                                    <i class="fas fa-chart-line action-icon"></i>
+                                    <span>Investir</span>
+                                </a>
+                                <a href="#request" class="action-btn">
+                                    <i class="fas fa-hand-holding-dollar action-icon"></i>
+                                    <span>Solicitar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Overlay para menu mobile -->
+    <label for="menu-toggle" class="menu-overlay"></label>
+
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
